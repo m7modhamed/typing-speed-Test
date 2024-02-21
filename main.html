@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+
+    <title>Type Speed Game</title>
+</head>
+<body>
+    
+    <div class="name">Typing Speed Test Game</div>
+    <div class="container">
+        <div class="welcom">
+            <p>Welcom to play Typing Speed Game</p>
+            <p>Test your typing speend now!</p>
+        </div>
+            <div class="choose">
+                <label for="levels">Choose a Level : </label>
+                <select name="levels" id="levels">
+                    <option value="Easy">Easy</option>
+                    <option value="Normal">Normal</option>
+                    <option value="Hard">Hard</option>
+                </select>
+            </div>
+            <a href="">Go</a>
+    </div>
+
+    <script type="text/javascript">
+        let lnk=document.querySelector('a');
+        lnk.onclick=function(){
+            getLevel();
+        }
+        function getLevel(){
+            selectElement = document.querySelector('#levels');
+            output = selectElement.value;
+            console.log(output)
+            document.querySelector('a').setAttribute('href', 'game.html?level=' + output);
+        }
+    </script>
+</body>
+</html>
